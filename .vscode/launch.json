@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (tests)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceRoot}/FluentErgast.Tests/bin/Debug/netcoreapp1.1/FluentErgast.Tests.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}/FluentErgast.Tests",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceRoot}/FluentErgast.TestClient/bin/Debug/netcoreapp1.1/FluentErgast.TestClient.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}/FluentErgast.TestClient",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
