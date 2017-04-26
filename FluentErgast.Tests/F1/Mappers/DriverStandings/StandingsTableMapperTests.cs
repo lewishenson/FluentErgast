@@ -1,10 +1,10 @@
 using FluentAssertions;
+using FluentErgast.F1.Mappers;
 using FluentErgast.F1.Mappers.DriverStandings;
 using NSubstitute;
 using Xunit;
-using InternalDtos = FluentErgast.F1.InternalDtos;
 using Dtos = FluentErgast.F1.Dtos;
-using FluentErgast.F1.Mappers;
+using InternalDtos = FluentErgast.F1.InternalDtos;
 
 namespace FluentErgast.Tests.F1.DriverStandings
 {
