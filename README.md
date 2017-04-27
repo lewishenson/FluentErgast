@@ -24,11 +24,11 @@ var driverStandings = await FluentErgast.F1.DriverStandings.ForRound(3).ForYearA
 Getting constructor standings for a whole season:
 
 ```csharp
-var constructorStandings = await FluentErgast.F1.DriverStandings.ForYearAsync(2016);
+var constructorStandings = await FluentErgast.F1.ConstructorStandings.ForYearAsync(2016);
 ```
 
 Getting constructor standings at a particular point in a season:
 
 ```csharp
-var constructorStandings = await FluentErgast.F1.DriverStandings.ForRound(1).ForYearAsync(2016);
+var constructorStandings = await FluentErgast.F1.ConstructorStandings.ForRound(1).ForYearAsync(2016);
 ```
