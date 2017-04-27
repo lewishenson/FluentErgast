@@ -18,14 +18,14 @@ namespace FluentErgast.Tests.F1
         {
             // Arrange
             var httpClient = Substitute.For<IHttpClient>();
-            var driverStandingsResponse = new InternalDtos.DriverStandings.Response
+            var driverStandingsResponse = new InternalDtos.Response<InternalDtos.DriverStandings.MRData>
             {
                 MRData = new InternalDtos.DriverStandings.MRData
                 {
                     StandingsTable = new InternalDtos.DriverStandings.StandingsTable()
                 }
             };
-            httpClient.GetAsync<InternalDtos.DriverStandings.Response>("http://ergast.com/api/f1/2017/driverStandings.json")
+            httpClient.GetAsync<InternalDtos.Response<InternalDtos.DriverStandings.MRData>>("http://ergast.com/api/f1/2017/driverStandings.json")
                       .Returns(Task.FromResult(driverStandingsResponse));
 
             var standingsTableMapper = Substitute.For<IMapper<InternalDtos.DriverStandings.StandingsTable, Dtos.DriverStandings.StandingsTable>>();
@@ -47,14 +47,14 @@ namespace FluentErgast.Tests.F1
         {
             // Arrange
             var httpClient = Substitute.For<IHttpClient>();
-            var driverStandingsResponse = new InternalDtos.DriverStandings.Response
+            var driverStandingsResponse = new InternalDtos.Response<InternalDtos.DriverStandings.MRData>
             {
                 MRData = new InternalDtos.DriverStandings.MRData
                 {
                     StandingsTable = new InternalDtos.DriverStandings.StandingsTable()
                 }
             };
-            httpClient.GetAsync<InternalDtos.DriverStandings.Response>($"http://ergast.com/api/f1/{DateTime.Now.Year}/driverStandings.json")
+            httpClient.GetAsync<InternalDtos.Response<InternalDtos.DriverStandings.MRData>>($"http://ergast.com/api/f1/{DateTime.Now.Year}/driverStandings.json")
                       .Returns(Task.FromResult(driverStandingsResponse));
 
             var standingsTableMapper = Substitute.For<IMapper<InternalDtos.DriverStandings.StandingsTable, Dtos.DriverStandings.StandingsTable>>();
@@ -76,14 +76,14 @@ namespace FluentErgast.Tests.F1
         {
             // Arrange
             var httpClient = Substitute.For<IHttpClient>();
-            var driverStandingsResponse = new InternalDtos.DriverStandings.Response
+            var driverStandingsResponse = new InternalDtos.Response<InternalDtos.DriverStandings.MRData>
             {
                 MRData = new InternalDtos.DriverStandings.MRData
                 {
                     StandingsTable = new InternalDtos.DriverStandings.StandingsTable()
                 }
             };
-            httpClient.GetAsync<InternalDtos.DriverStandings.Response>("http://ergast.com/api/f1/2017/3/driverStandings.json")
+            httpClient.GetAsync<InternalDtos.Response<InternalDtos.DriverStandings.MRData>>("http://ergast.com/api/f1/2017/3/driverStandings.json")
                       .Returns(Task.FromResult(driverStandingsResponse));
 
             var standingsTableMapper = Substitute.For<IMapper<InternalDtos.DriverStandings.StandingsTable, Dtos.DriverStandings.StandingsTable>>();

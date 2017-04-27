@@ -1,9 +1,9 @@
 using FluentAssertions;
-using FluentErgast.F1.InternalDtos.DriverStandings;
-using FluentErgast.F1.Mappers.DriverStandings;
+using FluentErgast.F1.InternalDtos.Shared;
+using FluentErgast.F1.Mappers.Shared;
 using Xunit;
 
-namespace FluentErgast.Tests.F1.DriverStandings
+namespace FluentErgast.Tests.F1.Shared
 {
     public class ConstructorMapperTests
     {

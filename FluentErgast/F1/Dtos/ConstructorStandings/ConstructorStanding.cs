@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using FluentErgast.F1.Dtos.Shared;
 
-namespace FluentErgast.F1.Dtos.DriverStandings
+namespace FluentErgast.F1.Dtos.ConstructorStandings
 {
-    public class DriverStanding
+    public class ConstructorStanding
     {
         public int Position { get; set; }
 
@@ -13,8 +13,6 @@ namespace FluentErgast.F1.Dtos.DriverStandings
 
         public int Wins { get; set; }
 
-        public Driver Driver { get; set; }
-
-        public IEnumerable<Constructor> Constructors { get; set; }
+        public Constructor Constructor { get; set; }
     }
 }

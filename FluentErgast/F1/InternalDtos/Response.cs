@@ -1,10 +1,10 @@
 using Newtonsoft.Json;
 
-namespace FluentErgast.F1.InternalDtos.DriverStandings
+namespace FluentErgast.F1.InternalDtos
 {
-    public class Response
+    public class Response<T> where T : MRDataBase
     {
         [JsonProperty("MRData")]
-        public MRData MRData { get; set; }
+        public T MRData { get; set; }
     }
 }

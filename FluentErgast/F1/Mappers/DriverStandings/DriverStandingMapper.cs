@@ -6,10 +6,10 @@ namespace FluentErgast.F1.Mappers.DriverStandings
     public class DriverStandingMapper : IMapper<InternalDtos.DriverStandings.DriverStanding, Dtos.DriverStandings.DriverStanding>
     {
         private readonly IMapper<InternalDtos.DriverStandings.Driver, Dtos.DriverStandings.Driver> driverMapper;
-        private readonly IMapper<InternalDtos.DriverStandings.Constructor, Dtos.DriverStandings.Constructor> constructorMapper;
+        private readonly IMapper<InternalDtos.Shared.Constructor, Dtos.Shared.Constructor> constructorMapper;
 
         public DriverStandingMapper(IMapper<InternalDtos.DriverStandings.Driver, Dtos.DriverStandings.Driver> driverMapper,
-                                    IMapper<InternalDtos.DriverStandings.Constructor, Dtos.DriverStandings.Constructor> constructorMapper)
+                                    IMapper<InternalDtos.Shared.Constructor, Dtos.Shared.Constructor> constructorMapper)
         {
             this.driverMapper = driverMapper;
             this.constructorMapper = constructorMapper;

@@ -1,9 +1,9 @@
-using Newtonsoft.Json;
 using FluentErgast.F1.InternalDtos.Shared;
+using Newtonsoft.Json;
 
-namespace FluentErgast.F1.InternalDtos.DriverStandings
+namespace FluentErgast.F1.InternalDtos.ConstructorStandings
 {
-    public class DriverStanding
+    public class ConstructorStanding
     {
         [JsonProperty("position")]
         public string Position { get; set; }
@@ -17,10 +17,7 @@ namespace FluentErgast.F1.InternalDtos.DriverStandings
         [JsonProperty("wins")]
         public string Wins { get; set; }
 
-        [JsonProperty("Driver")]
-        public Driver Driver { get; set; }
-
-        [JsonProperty("Constructors")]
-        public Constructor[] Constructors { get; set; }
+        [JsonProperty("Constructor")]
+        public Constructor Constructor { get; set; }
     }
 }
