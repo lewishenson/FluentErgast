@@ -15,7 +15,7 @@ namespace FluentErgast.Tests.F1.DriverStandings
         {
             // Arrange
             var driverMapper = Substitute.For<IMapper<InternalDtos.DriverStandings.Driver, Dtos.DriverStandings.Driver>>();
-            var constructorMapper = Substitute.For<IMapper<InternalDtos.DriverStandings.Constructor, Dtos.DriverStandings.Constructor>>();
+            var constructorMapper = Substitute.For<IMapper<InternalDtos.Shared.Constructor, Dtos.Shared.Constructor>>();
             var subjectUnderTest = new DriverStandingMapper(driverMapper, constructorMapper);
 
             // Act
@@ -36,9 +36,9 @@ namespace FluentErgast.Tests.F1.DriverStandings
                 Points = "2",
                 Wins = "3",
                 Driver = new InternalDtos.DriverStandings.Driver(),
-                Constructors = new InternalDtos.DriverStandings.Constructor[]
+                Constructors = new InternalDtos.Shared.Constructor[]
                 {
-                    new InternalDtos.DriverStandings.Constructor()
+                    new InternalDtos.Shared.Constructor()
                 }
             };
 
@@ -47,8 +47,8 @@ namespace FluentErgast.Tests.F1.DriverStandings
             driverMapper.Map(internalDto.Driver)
                         .Returns(driverDto);
 
-            var constructorMapper = Substitute.For<IMapper<InternalDtos.DriverStandings.Constructor, Dtos.DriverStandings.Constructor>>();
-            var constructorDto = new Dtos.DriverStandings.Constructor();
+            var constructorMapper = Substitute.For<IMapper<InternalDtos.Shared.Constructor, Dtos.Shared.Constructor>>();
+            var constructorDto = new Dtos.Shared.Constructor();
             constructorMapper.Map(internalDto.Constructors[0])
                              .Returns(constructorDto);
 
