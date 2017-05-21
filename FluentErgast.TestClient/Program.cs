@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentErgast;
 using FluentErgast.F1.Dtos.ConstructorStandings;
 using FluentErgast.F1.Dtos.DriverStandings;
 using ConstructorStandingsTable = FluentErgast.F1.Dtos.ConstructorStandings.StandingsTable;
@@ -17,12 +18,12 @@ namespace FluentErgast.TestClient
 
         private static async Task MainAsync()
         {
-            var driverStandings = await FluentErgast.F1.DriverStandings.ForYearAsync(2009);
+            var driverStandings = await Ergast.F1.DriverStandings.ForYearAsync(2009);
             OutputDriverStandings(driverStandings);
 
             Console.WriteLine();
 
-            var constructorStandings = await FluentErgast.F1.ConstructorStandings.ForYearAsync(2009);
+            var constructorStandings = await Ergast.F1.ConstructorStandings.ForYearAsync(2009);
             OutputConstructorStandings(constructorStandings);
         }
 

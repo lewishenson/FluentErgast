@@ -4,11 +4,11 @@ using FluentErgast.Http;
 
 namespace FluentErgast
 {
-    public static class FluentErgast
+    public static class Ergast
     {
         private readonly static IHttpClient HttpClient = new HttpClientWrapper();
 
-        static FluentErgast()
+        static Ergast()
         {
             var constructorMapper = new ConstructorMapper();
             var driverStandings = CreateDriverStandings(constructorMapper);
